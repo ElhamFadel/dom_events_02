@@ -13,14 +13,16 @@ function change(e){
     if(e.type=="click"){
     let numRand =Math.floor( Math.random()*(colors.length));
     targt.style.backgroundColor = colors[numRand];
-    inpt.setAttribute("value",colors[numRand]);
+    inpt.value=colors[numRand];
+   
+    
     }else{
-        var RegExp = /^#[0-9A-F]{6}$/i; //مش مفهومة منيح بس بحثت عنها 
+        var RegExp = /^#[0-9A-F]{6||3}$/i; //مش مفهومة منيح بس بحثت عنها 
         if(RegExp.test(inpt.value)){
         targt.style.backgroundColor =inpt.value  ;
-        inpt.style.color = inpt.value;
+        
     }
-
     }
+    inpt.style.color = inpt.value;
 
 }
