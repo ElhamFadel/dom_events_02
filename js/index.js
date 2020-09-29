@@ -9,7 +9,8 @@ butt.addEventListener('click',change);
 inpt.addEventListener('input',change);
 
 function change(e){
-    if(e==="change"){
+
+    if(e.type=="click"){
     let numRand =Math.floor( Math.random()*(colors.length));
     targt.style.backgroundColor = colors[numRand];
     inpt.setAttribute("value",colors[numRand]);
